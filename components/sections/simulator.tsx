@@ -25,7 +25,7 @@ export function Simulator() {
   };
 
   return (
-    <section id="simulateur" className="section-y bg-white">
+    <section id="simulateur" className="section-y bg-mist">
       <div className="container-x">
         <SectionHeading
           eyebrow="Simulateur de Projet"

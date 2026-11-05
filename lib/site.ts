@@ -10,6 +10,7 @@ export const site = {
   nav: [
     { label: "Services", href: "#services" },
     { label: "Architecture", href: "#architecture" },
+    { label: "Réalisations", href: "#realisations" },
     { label: "À propos", href: "#a-propos" },
     { label: "Simulateur", href: "#simulateur" },
   ],

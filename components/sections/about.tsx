@@ -17,7 +17,7 @@ const skills = [
 
 export function About() {
   return (
-    <section id="a-propos" className="section-y bg-mist">
+    <section id="a-propos" className="section-y bg-white">
       <div className="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <p className="eyebrow">À propos & Fondateur</p>
