@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: site.founder, url: site.linkedinUrl }],
   alternates: { canonical: "/" },
-  verification: process.env.GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
-    : undefined,
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION ?? "8pyAWkirunlw8mdTOrEVi-zastgdMv7s03217752kXA",
+  },
   openGraph: {
     title: `${site.name} — De l'idée au produit scalable`,
     description: site.description,
