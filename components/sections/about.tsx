@@ -1,5 +1,6 @@
 import { Code2, Network, UserRound } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
+import { site } from "@/lib/site";
 
 const skills = [
   {
@@ -56,8 +57,9 @@ export function About() {
               «&nbsp;Pas d&apos;intermédiaires, pas de commercial sans compétence technique. Vous
               échangez directement avec l&apos;expert qui conçoit et bâtit votre solution.&nbsp;»
             </blockquote>
-            <figcaption className="relative mt-8 text-sm text-white/60">
-              Fondateur, Atsugo Consulting
+            <figcaption className="relative mt-8">
+              <span className="block font-semibold text-white">{site.founder}</span>
+              <span className="text-sm text-white/60">Fondateur, Atsugo Consulting</span>
             </figcaption>
           </figure>
         </Reveal>

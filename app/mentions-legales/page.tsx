@@ -3,18 +3,22 @@ import { LegalPage } from "@/components/legal-page";
 
 export const metadata: Metadata = { title: "Mentions légales" };
 
-// TODO : compléter les champs entre [crochets] avec les informations officielles de la société.
 export default function MentionsLegales() {
   return (
     <LegalPage title="Mentions légales" updated="5 novembre 2026">
       <section>
         <h2>Éditeur du site</h2>
         <p>
-          Atsugo Consulting — [forme juridique] au capital de [montant] €<br />
-          Siège social : [adresse]<br />
-          SIRET : [numéro] · RCS [ville] · TVA intracommunautaire : [numéro]<br />
-          Directeur de la publication : [nom du dirigeant]<br />
-          Contact : contact@atsugo-consulting.com
+          Hugo Moulard, entrepreneur individuel (EI), exerçant sous le nom commercial Atsugo Consulting
+          <br />
+          SIREN : 947 836 102<br />
+          Adresse : 94200 Ivry-sur-Seine, France
+          <br />
+          Activité : programmation informatique
+          <br />
+          Directeur de la publication : Hugo Moulard
+          <br />
+          Contact : <a href="mailto:atsugo.webapp@gmail.com" className="text-accent hover:underline">atsugo.webapp@gmail.com</a>
         </p>
       </section>
       <section>
@@ -27,7 +31,7 @@ export default function MentionsLegales() {
         <h2>Propriété intellectuelle</h2>
         <p>
           L&apos;ensemble des contenus de ce site (textes, visuels, logo, code) est la propriété exclusive
-          d&apos;Atsugo Consulting, sauf mention contraire. Toute reproduction sans autorisation préalable est
+          de Hugo Moulard (Atsugo Consulting), sauf mention contraire. Toute reproduction sans autorisation préalable est
           interdite.
         </p>
       </section>

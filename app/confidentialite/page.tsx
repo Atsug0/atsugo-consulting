@@ -7,6 +7,13 @@ export default function Confidentialite() {
   return (
     <LegalPage title="Politique de confidentialité" updated="5 novembre 2026">
       <section>
+        <h2>Responsable du traitement</h2>
+        <p>
+          Hugo Moulard, entrepreneur individuel (Atsugo Consulting), SIREN 947 836 102, 94200 Ivry-sur-Seine —
+          atsugo.webapp@gmail.com
+        </p>
+      </section>
+      <section>
         <h2>Données collectées</h2>
         <p>
           Via le formulaire du simulateur, nous collectons uniquement : nom, e-mail, entreprise (facultatif),
@@ -27,7 +34,7 @@ export default function Confidentialite() {
       <section>
         <h2>Sous-traitants</h2>
         <p>
-          Hébergement : Vercel. Envoi d&apos;e-mails : Resend. Prise de rendez-vous : Calendly / Cal.com
+          Hébergement : Vercel. Envoi d&apos;e-mails : Resend. Prise de rendez-vous : Calendly
           (soumis à leurs propres politiques lorsque vous utilisez le calendrier).
         </p>
       </section>
@@ -35,7 +42,7 @@ export default function Confidentialite() {
         <h2>Vos droits</h2>
         <p>
           Vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement, d&apos;opposition et de
-          portabilité. Pour l&apos;exercer : contact@atsugo-consulting.com. Vous pouvez également saisir la CNIL
+          portabilité. Pour l&apos;exercer : atsugo.webapp@gmail.com. Vous pouvez également saisir la CNIL
           (cnil.fr).
         </p>
       </section>

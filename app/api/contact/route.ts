@@ -63,7 +63,7 @@ export async function POST(req: Request) {
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       from: process.env.CONTACT_FROM_EMAIL ?? "Atsugo Site <onboarding@resend.dev>",
-      to: [process.env.CONTACT_TO_EMAIL ?? "contact@atsugo-consulting.com"],
+      to: [process.env.CONTACT_TO_EMAIL ?? "atsugo.webapp@gmail.com"],
       reply_to: data.email,
       subject: `Nouvelle demande — ${data.need || "Projet"} · ${data.name}`,
       html: `<table>${rows}</table><p style="white-space:pre-wrap">${escapeHtml(data.message || "(pas de message)")}</p>`,
