@@ -1,4 +1,4 @@
-# Atsugo Consulting — Site vitrine
+# Atsugo Consulting — Site vitrine 
 
 Site Next.js (App Router) · React 19 · Tailwind CSS · Framer Motion · Lucide.
 
