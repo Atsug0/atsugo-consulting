@@ -1,6 +1,6 @@
 export const site = {
   name: "Atsugo Consulting",
-  url: "https://atsugo-consulting.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://atsugo-consulting.vercel.app",
   description:
     "CTO externalisé, cadrage d'architecture et développement sur-mesure d'applications web et mobiles pour startups et PME ambitieuses.",
   email: "atsugo.webapp@gmail.com",
