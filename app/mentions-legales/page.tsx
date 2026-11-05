@@ -11,8 +11,9 @@ export default function MentionsLegales() {
         <p>
           Hugo Moulard, entrepreneur individuel (EI), exerçant sous le nom commercial Atsugo Consulting
           <br />
-          SIREN : 947 836 102<br />
-          Adresse : 94200 Ivry-sur-Seine, France
+          SIREN : 947 836 102 · TVA non applicable, art. 293 B du CGI
+          <br />
+          Adresse : 8 allée Chanteclair, 94200 Ivry-sur-Seine, France
           <br />
           Activité : programmation informatique
           <br />

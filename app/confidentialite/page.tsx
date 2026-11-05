@@ -9,7 +9,7 @@ export default function Confidentialite() {
       <section>
         <h2>Responsable du traitement</h2>
         <p>
-          Hugo Moulard, entrepreneur individuel (Atsugo Consulting), SIREN 947 836 102, 94200 Ivry-sur-Seine —
+          Hugo Moulard, entrepreneur individuel (Atsugo Consulting), SIREN 947 836 102, 8 allée Chanteclair, 94200 Ivry-sur-Seine —
           atsugo.webapp@gmail.com
         </p>
       </section>
