@@ -137,11 +137,10 @@ export const abonnement = {
 
 /**
  * Photo du fondateur affichée sur /domicile.
- * Dépose le fichier dans public/ (format portrait, ~800 px de large)
- * puis renseigne son chemin ici : "/hugo.jpg".
- * Tant que c'est `null`, un visuel de substitution s'affiche.
+ * Source carrée 800×800, recadrée en 4/5 par le cadre (object-cover).
+ * Mettre `null` pour revenir au visuel de substitution (initiales).
  */
-export const photo: string | null = null;
+export const photo: string | null = "/hugo.jpg";
 
 export const garanties = [
   {
