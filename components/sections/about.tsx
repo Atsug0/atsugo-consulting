@@ -11,7 +11,7 @@ const skills = [
   {
     Icon: Code2,
     title: "Développeur Full-Stack & Mobile",
-    text: "Des années à concevoir et livrer des applications web et mobiles en production.",
+    text: "Deux applications conçues, développées et publiées sur les stores, de la première ligne de code à la mise en production.",
   },
 ];
 

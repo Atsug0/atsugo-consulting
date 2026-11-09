@@ -69,9 +69,9 @@ export function ArchitectureViewer() {
     <section id="architecture" className="section-y bg-white">
       <div className="container-x">
         <SectionHeading
-          eyebrow="Visualiseur d'Architecture"
+          eyebrow="Comment je construis"
           title="La rigueur, couche par couche."
-          description="Explorez les trois piliers techniques de chaque projet Atsugo."
+          description="Les trois piliers techniques sur lesquels je construis chaque projet."
         />
 
         <Reveal delay={0.1} className="mt-12 flex justify-center">

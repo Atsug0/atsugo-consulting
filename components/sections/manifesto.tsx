@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { useRef } from "react";
 
 const TEXT =
-  "La complexité technique ne doit jamais freiner l'ambition d'un projet. Chez Atsugo Consulting, nous combinons la rigueur d'un ingénieur en architecture et l'agilité d'un partenaire produit.";
+  "La complexité technique ne doit jamais freiner l'ambition d'un projet. Chez Atsugo Consulting, je combine la rigueur d'un ingénieur en architecture et l'agilité d'un partenaire produit.";
 
 const words = TEXT.split(" ");
 

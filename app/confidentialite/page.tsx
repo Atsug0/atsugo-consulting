@@ -16,15 +16,19 @@ export default function Confidentialite() {
       <section>
         <h2>Données collectées</h2>
         <p>
-          Via le formulaire du simulateur, nous collectons uniquement : nom, e-mail, entreprise (facultatif),
-          message et réponses au simulateur. Aucune donnée n&apos;est collectée à votre insu.
+          Via le formulaire du simulateur : nom, e-mail, entreprise (facultatif), message et réponses au
+          simulateur. Via le formulaire de rappel de la page «&nbsp;à domicile&nbsp;» : prénom, numéro de
+          téléphone, ville (facultative), nature du besoin et précisions éventuelles. Aucune donnée
+          n&apos;est collectée à votre insu.
         </p>
       </section>
       <section>
         <h2>Finalité et base légale</h2>
         <p>
-          Ces données servent exclusivement à répondre à votre demande et à préparer notre échange (intérêt
-          légitime / mesures précontractuelles, art. 6 RGPD). Elles ne sont ni revendues ni cédées.
+          Ces données servent exclusivement à répondre à votre demande, à vous rappeler lorsque vous
+          l&apos;avez demandé, et à préparer notre échange (consentement / mesures précontractuelles,
+          art. 6 RGPD). Elles ne sont ni revendues ni cédées, et ne font l&apos;objet d&apos;aucune
+          prospection commerciale.
         </p>
       </section>
       <section>

@@ -6,6 +6,7 @@ import { ArchitectureViewer } from "@/components/sections/architecture-viewer";
 import { Work } from "@/components/sections/work";
 import { About } from "@/components/sections/about";
 import { Simulator } from "@/components/sections/simulator";
+import { AudienceBridge } from "@/components/sections/audience-bridge";
 import { Footer } from "@/components/footer";
 import { site } from "@/lib/site";
 
@@ -42,6 +43,7 @@ export default function HomePage() {
         <Work />
         <About />
         <Simulator />
+        <AudienceBridge current="pro" />
       </main>
       <Footer />
     </>

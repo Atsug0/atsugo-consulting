@@ -55,7 +55,7 @@ export function Services() {
         <SectionHeading
           eyebrow="Offres & Expertises"
           title="Trois façons de faire avancer votre produit."
-          description="Du premier schéma au pilotage d'équipe, une seule exigence : des choix techniques qui servent votre croissance."
+          description="Du premier schéma au pilotage d'équipe, une seule exigence : des choix techniques qui servent votre croissance. Je vous accompagne sur l'une de ces trois voies, ou sur les trois."
         />
 
         <div className="mt-16 grid gap-5 md:grid-cols-3">

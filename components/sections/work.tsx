@@ -61,7 +61,7 @@ export function Work() {
         <SectionHeading
           eyebrow="Réalisations"
           title="Des produits conçus, codés et publiés."
-          description="De l'idée à la publication sur les stores : deux applications pensées et développées de bout en bout."
+          description="De l'idée à la publication sur les stores : deux applications que j'ai conçues et développées de bout en bout, seul."
         />
 
         <div className="mt-16 grid gap-5 lg:grid-cols-2">

@@ -5,6 +5,8 @@ export const site = {
     "CTO externalisé, cadrage d'architecture et développement sur-mesure d'applications web et mobiles pour startups et PME ambitieuses.",
   email: "atsugo.webapp@gmail.com",
   founder: "Hugo Moulard",
+  siren: "947 836 102",
+  city: "Ivry-sur-Seine",
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://calendly.com/atsugo-webapp/30min",
   linkedinUrl: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "https://www.linkedin.com/in/hugo-moulard-248890256/",
   nav: [
@@ -15,3 +17,69 @@ export const site = {
     { label: "Simulateur", href: "#simulateur" },
   ],
 } as const;
+
+export type AudienceId = "pro" | "tpe" | "domicile";
+
+/** Les trois publics, et leur porte d'entrée. */
+export const audiences: {
+  id: AudienceId;
+  label: string;
+  short: string;
+  tagline: string;
+  href: string;
+}[] = [
+  {
+    id: "pro",
+    label: "Startups & éditeurs",
+    short: "Startups",
+    tagline: "Produit, architecture, CTO externalisé.",
+    href: "/",
+  },
+  {
+    id: "tpe",
+    label: "TPE, commerces & assos",
+    short: "TPE",
+    tagline: "Site, outils, IA et informatique du quotidien.",
+    href: "/tpe",
+  },
+  {
+    id: "domicile",
+    label: "Particuliers",
+    short: "Particuliers",
+    tagline: "Dépannage et assistance à domicile.",
+    href: "/domicile",
+  },
+];
+
+/** Navigation et CTA par page. */
+export const navByAudience: Record<
+  AudienceId,
+  { nav: { label: string; href: string }[]; ctaLabel: string; ctaHref: string }
+> = {
+  pro: {
+    nav: site.nav.map((i) => ({ label: i.label, href: `/${i.href}` })),
+    ctaLabel: "Échanger sur mon projet",
+    ctaHref: "/#simulateur",
+  },
+  tpe: {
+    nav: [
+      { label: "Ce que je fais", href: "/tpe#domaines" },
+      { label: "Tarifs", href: "/tpe#tarifs" },
+      { label: "Méthode", href: "/tpe#methode" },
+      { label: "Questions", href: "/tpe#faq" },
+    ],
+    ctaLabel: "Parler de mon besoin",
+    ctaHref: "/tpe#contact",
+  },
+  domicile: {
+    nav: [
+      { label: "Prestations", href: "/domicile#prestations" },
+      { label: "Tarifs", href: "/domicile#tarifs" },
+      { label: "Comment ça marche", href: "/domicile#confiance" },
+      { label: "Zone", href: "/domicile#zone" },
+      { label: "Questions", href: "/domicile#faq" },
+    ],
+    ctaLabel: "Être rappelé",
+    ctaHref: "/domicile#rappel",
+  },
+};

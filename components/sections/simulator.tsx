@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, CalendarDays, Check, Clock, Loader2, RotateCcw, Send } from "lucide-react";
+import { ArrowLeft, CalendarDays, Check, Clock, Loader2, RotateCcw, Send, Wallet } from "lucide-react";
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { useBooking } from "@/components/booking-modal";
 import { Button } from "@/components/ui/button";
@@ -229,10 +230,24 @@ function Result({
           <span className="rounded-full bg-white/10 px-2.5 py-1">{stageLabel}</span>
         </div>
         <p className="mt-5 text-sm text-white/60">{estimate.headline}</p>
-        <p className="mt-1 flex items-center gap-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-          <Clock className="h-7 w-7 text-[#7FB2FF]" strokeWidth={1.75} />
-          {estimate.duration}
-        </p>
+        <div className="mt-2 grid gap-4 sm:grid-cols-2">
+          <div>
+            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-white/40">
+              <Clock className="h-3.5 w-3.5" strokeWidth={2} />
+              Durée estimée
+            </p>
+            <p className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">{estimate.duration}</p>
+          </div>
+          <div className="sm:border-l sm:border-white/10 sm:pl-6">
+            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-white/40">
+              <Wallet className="h-3.5 w-3.5" strokeWidth={2} />
+              Budget indicatif
+            </p>
+            <p className="mt-1 text-2xl font-semibold tracking-tight text-[#7FB2FF] sm:text-3xl">
+              {estimate.budget}
+            </p>
+          </div>
+        </div>
         <ul className="mt-6 grid gap-2 sm:grid-cols-3">
           {estimate.phases.map((p, i) => (
             <li key={p} className="rounded-xl bg-white/[0.06] p-3 text-sm text-white/85">
@@ -242,7 +257,8 @@ function Result({
           ))}
         </ul>
         <p className="mt-5 text-xs text-white/40">
-          Estimation indicative, affinée lors de notre premier échange.
+          Estimation indicative, affinée lors de notre premier échange. Prix nets&nbsp;: en franchise
+          en base de TVA, le montant annoncé est celui que vous payez.
         </p>
       </div>
 
@@ -271,7 +287,7 @@ function Result({
                 name="email"
                 type="email"
                 required
-                placeholder="E-mail professionnel"
+                placeholder="Votre e-mail"
                 className="field"
                 autoComplete="email"
               />
@@ -289,7 +305,23 @@ function Result({
             {/* Champ piège anti-spam, invisible pour les humains */}
             <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
-            {error && <p className="text-sm text-red-600">{error}</p>}
+            <label className="mt-1 flex cursor-pointer items-start gap-3 text-[13px] leading-relaxed text-muted">
+              <input
+                type="checkbox"
+                name="consent"
+                required
+                className="mt-0.5 h-4 w-4 shrink-0 rounded border-black/20 text-accent focus:ring-accent/30"
+              />
+              <span>
+                J&apos;accepte que mes coordonnées soient utilisées pour répondre à ma demande.{" "}
+                <Link href="/confidentialite" className="text-accent hover:underline">
+                  Politique de confidentialité
+                </Link>
+                .
+              </span>
+            </label>
+
+            {error && <p role="alert" className="text-sm text-red-600">{error}</p>}
 
             <div className="mt-2 flex flex-col gap-3 sm:flex-row">
               <Button type="submit" size="lg" disabled={status === "sending"} className="sm:flex-1">
