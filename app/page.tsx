@@ -28,13 +28,29 @@ const jsonLd = {
   },
   areaServed: "FR",
   sameAs: [site.linkedinUrl],
+  logo: `${site.url}/icon-512.png`,
+  image: `${site.url}/icon-512.png`,
   knowsAbout: ["CTO externalisé", "Architecture logicielle", "Développement web", "Applications mobiles"],
+};
+
+/**
+ * Nom de site affiché par Google dans les résultats de recherche. Sans ce
+ * noeud, Google déduit le nom du domaine — d'où le « Vercel » affiché tant
+ * que le site vivait sur vercel.app.
+ */
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  alternateName: "Atsugo",
+  url: site.url,
 };
 
 export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }} />
       <Header />
       <main>
         <Hero />
