@@ -12,6 +12,8 @@ import {
 } from "@/components/sections/tpe/sections";
 import { domaines, faqTpe } from "@/lib/tpe";
 import { zone } from "@/lib/domicile";
+import { Avis } from "@/components/sections/avis";
+import { ActionBar } from "@/components/action-bar";
 import { site } from "@/lib/site";
 
 const title = "Informatique pour TPE, commerces & associations — site, outils sur mesure et IA";
@@ -51,6 +53,7 @@ const serviceLd = {
   name: `${site.name} — Informatique pour TPE et commerces`,
   url: `${site.url}/tpe`,
   email: site.email,
+  ...(site.phone ? { telephone: site.phone } : {}),
   description,
   priceRange: "190 € – 5 000 €",
   founder: { "@type": "Person", name: site.founder },
@@ -110,6 +113,7 @@ export default function TpePage() {
         <TpeDomaines />
         <TpeTarifs />
         <TpeMethode />
+        <Avis audience="tpe" />
         <TpeFaq />
         <CallbackForm
           id="contact"
@@ -124,6 +128,7 @@ export default function TpePage() {
         />
         <AudienceBridge current="tpe" />
       </main>
+      <ActionBar target="contact" label="Me contacter" />
       <Footer />
     </>
   );

@@ -17,6 +17,7 @@ const jsonLd = {
   url: site.url,
   description: site.description,
   email: site.email,
+  ...(site.phone ? { telephone: site.phone } : {}),
   founder: { "@type": "Person", name: site.founder, sameAs: [site.linkedinUrl] },
   address: {
     "@type": "PostalAddress",

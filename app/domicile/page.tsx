@@ -9,6 +9,8 @@ import { DomicileConfiance } from "@/components/sections/domicile/confiance";
 import { DomicileFaq, DomicileZone } from "@/components/sections/domicile/zone-faq";
 import { CallbackForm } from "@/components/sections/domicile/callback-form";
 import { faq, forfaits, zone } from "@/lib/domicile";
+import { Avis } from "@/components/sections/avis";
+import { ActionBar } from "@/components/action-bar";
 import { site } from "@/lib/site";
 
 const title = "Dépannage informatique à domicile — Ivry-sur-Seine & Val-de-Marne";
@@ -51,6 +53,7 @@ const localBusinessLd = {
   name: `${site.name} — Dépannage à domicile`,
   url: `${site.url}/domicile`,
   email: site.email,
+  ...(site.phone ? { telephone: site.phone } : {}),
   description,
   priceRange: "55 € – 170 €",
   founder: { "@type": "Person", name: site.founder },
@@ -93,11 +96,13 @@ export default function DomicilePage() {
         <DomicilePrestations />
         <DomicileTarifs />
         <DomicileConfiance />
+        <Avis audience="domicile" />
         <DomicileZone />
         <DomicileFaq />
         <CallbackForm />
         <AudienceBridge current="domicile" />
       </main>
+      <ActionBar target="rappel" label="Être rappelé" />
       <Footer />
     </>
   );
