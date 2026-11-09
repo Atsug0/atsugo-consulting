@@ -5,6 +5,7 @@ import { Check, Clock, Loader2, PhoneCall, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
+import { site, telHref } from "@/lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -83,6 +84,14 @@ export function CallbackForm({
             {title}
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-white/60">{description}</p>
+          {telHref && (
+            <p className="mt-6 text-[15px] text-white/60">
+              Vous préférez appeler&nbsp;?{" "}
+              <a href={telHref} className="font-semibold text-white hover:underline">
+                {site.phone}
+              </a>
+            </p>
+          )}
         </div>
 
         <div className="mx-auto mt-12 max-w-xl">

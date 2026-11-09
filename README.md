@@ -23,11 +23,13 @@ app/
   confidentialite/        Politique de confidentialité
 components/
   header.tsx              Header sticky, glassmorphism au scroll, menu mobile
+  action-bar.tsx          Barre d'appel/rappel collante, mobile uniquement
   booking-modal.tsx       Modale Calendly / Cal.com (useBooking().open())
   sections/               Hero, Manifeste, Services, Visualiseur, À propos, Simulateur
   ui/                     Button (pill), Reveal (fade + slide-up), SectionHeading
 lib/
-  site.ts                 Navigation, URLs (booking, LinkedIn)
+  site.ts                 Navigation, coordonnées, URLs (booking, LinkedIn, avis)
+  avis.ts                 Avis clients réels ; vide = la section Avis est masquée
   estimates.ts            Matrice d'estimation du simulateur (besoin × stade)
 ```
 
@@ -36,6 +38,9 @@ lib/
 | Variable | Rôle |
 | --- | --- |
 | `NEXT_PUBLIC_BOOKING_URL` | Lien Calendly ou Cal.com chargé dans la modale |
+| `NEXT_PUBLIC_PHONE` | Numéro affiché publiquement. Vide = aucun bouton d'appel |
+| `NEXT_PUBLIC_WHATSAPP_URL` | Lien WhatsApp optionnel (`https://wa.me/33…`) |
+| `NEXT_PUBLIC_REVIEW_URL` | Lien « laisser un avis » de la fiche Google |
 | `NEXT_PUBLIC_LINKEDIN_URL` | Profil LinkedIn du footer |
 | `RESEND_API_KEY` | Active l'envoi d'e-mails ; sans clé, les demandes sont seulement journalisées |
 | `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` | Destinataire et expéditeur des e-mails |

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { site } from "@/lib/site";
+import { site, telHref } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -12,12 +12,19 @@ export function Footer() {
             <p className="max-w-xs text-sm leading-relaxed text-muted">
               {site.founder} — ingénieur et développeur, basé à {site.city}.
             </p>
-            <a
-              href={`mailto:${site.email}`}
-              className="inline-block text-sm text-accent transition hover:underline"
-            >
-              {site.email}
-            </a>
+            <div className="flex flex-col gap-1.5">
+              {telHref && (
+                <a href={telHref} className="text-sm font-medium text-ink transition hover:text-accent">
+                  {site.phone}
+                </a>
+              )}
+              <a
+                href={`mailto:${site.email}`}
+                className="inline-block text-sm text-accent transition hover:underline"
+              >
+                {site.email}
+              </a>
+            </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 sm:gap-14">
@@ -53,6 +60,16 @@ export function Footer() {
               >
                 Profil LinkedIn
               </a>
+              {site.reviewUrl && (
+                <a
+                  href={site.reviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted transition hover:text-ink"
+                >
+                  Laisser un avis
+                </a>
+              )}
             </nav>
           </div>
         </div>

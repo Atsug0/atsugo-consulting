@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, BadgeEuro, Car, FileText, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { zone } from "@/lib/domicile";
+import { site, telHref } from "@/lib/site";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -59,14 +60,28 @@ export function DomicileHero() {
           transition={{ duration: 0.9, delay: 0.24, ease }}
           className="mt-10 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row"
         >
-          <Button href="#rappel" size="lg" className="w-full sm:w-auto">
-            <PhoneCall className="h-4 w-4" />
-            Être rappelé gratuitement
-          </Button>
-          <Button href="#tarifs" size="lg" variant="ghost" className="w-full sm:w-auto">
-            Voir les tarifs
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Button>
+          {telHref ? (
+            <>
+              <Button href={telHref} size="lg" className="w-full sm:w-auto">
+                <PhoneCall className="h-4 w-4" />
+                {site.phone}
+              </Button>
+              <Button href="#rappel" size="lg" variant="secondary" className="w-full sm:w-auto">
+                Ou être rappelé gratuitement
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button href="#rappel" size="lg" className="w-full sm:w-auto">
+                <PhoneCall className="h-4 w-4" />
+                Être rappelé gratuitement
+              </Button>
+              <Button href="#tarifs" size="lg" variant="ghost" className="w-full sm:w-auto">
+                Voir les tarifs
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Button>
+            </>
+          )}
         </motion.div>
 
         <motion.ul

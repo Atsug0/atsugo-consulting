@@ -8,6 +8,16 @@ export const site = {
   siren: "947 836 102",
   city: "Ivry-sur-Seine",
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://calendly.com/atsugo-webapp/30min",
+  /**
+   * Numéro affiché publiquement (boutons « Appeler », barre mobile, JSON-LD).
+   * Vide = aucun bouton d'appel nulle part : le site retombe sur le formulaire
+   * de rappel. Renseigner NEXT_PUBLIC_PHONE active l'appel partout d'un coup.
+   */
+  phone: process.env.NEXT_PUBLIC_PHONE ?? "",
+  /** Lien WhatsApp (wa.me/33…). Optionnel, affiché à côté de l'appel. */
+  whatsappUrl: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "",
+  /** Lien « laisser un avis » (fiche Google). Vide = le lien n'apparaît pas. */
+  reviewUrl: process.env.NEXT_PUBLIC_REVIEW_URL ?? "",
   linkedinUrl: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "https://www.linkedin.com/in/hugo-moulard-248890256/",
   nav: [
     { label: "Services", href: "#services" },
@@ -17,6 +27,9 @@ export const site = {
     { label: "Simulateur", href: "#simulateur" },
   ],
 } as const;
+
+/** `tel:` normalisé (sans espaces) à partir du numéro affiché. */
+export const telHref = site.phone ? `tel:${site.phone.replace(/[^+\d]/g, "")}` : "";
 
 export type AudienceId = "pro" | "tpe" | "domicile";
 
