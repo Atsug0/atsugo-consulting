@@ -1,6 +1,6 @@
 export const site = {
   name: "Atsugo Consulting",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://atsugo-consulting.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://atsugo.fr",
   description:
     "CTO externalisé, cadrage d'architecture et développement sur-mesure d'applications web et mobiles pour startups et PME ambitieuses.",
   email: "atsugo.webapp@gmail.com",
@@ -17,7 +17,7 @@ export const site = {
   /** Lien WhatsApp (wa.me/33…). Optionnel, affiché à côté de l'appel. */
   whatsappUrl: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "",
   /** Lien « laisser un avis » (fiche Google). Vide = le lien n'apparaît pas. */
-  reviewUrl: process.env.NEXT_PUBLIC_REVIEW_URL ?? "",
+  reviewUrl: process.env.NEXT_PUBLIC_REVIEW_URL ?? "https://g.page/r/CakOvPH_dPe3ECE/review",
   linkedinUrl: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "https://www.linkedin.com/in/hugo-moulard-248890256/",
   nav: [
     { label: "Services", href: "#services" },

@@ -13,7 +13,10 @@ import { site } from "@/lib/site";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${site.url}/#organisation`,
   name: site.name,
+  alternateName: ["Atsugo", "atsugo-consulting", "Atsugo Consulting Paris"],
+  legalName: `${site.name} (Hugo Moulard)`,
   url: site.url,
   description: site.description,
   email: site.email,
@@ -42,8 +45,10 @@ const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: site.name,
-  alternateName: "Atsugo",
+  alternateName: ["Atsugo", "atsugo-consulting", "Atsugo Consulting Paris"],
   url: site.url,
+  publisher: { "@id": `${site.url}/#organisation` },
+  inLanguage: "fr-FR",
 };
 
 export default function HomePage() {
